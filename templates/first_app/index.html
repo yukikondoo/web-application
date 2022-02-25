@@ -1,7 +1,19 @@
+<!DOCTYPE html>
+{% load static %}
 <html>
-<body>
-    <p>Hi there!</p>
-    <p>It works!</p>
-    {{ insert_me }}
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title> Test Image </title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">  
+        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
+    </head>
+    <body>
+        <div class="container">
+            <h1> This is a test image</h1>
+            <img src="{% static 'images/djangotest.jpg' %}" alt="My image">
+            <p>Hi there!</p>
+            <p>It works!</p>
+        </div>
+    </body>
 </html>
