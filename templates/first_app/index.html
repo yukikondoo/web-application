@@ -1,37 +1,9 @@
-<!DOCTYPE html>
-{% load static %}
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title> Django Test </title>
-        <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
-    </head>
-    <body>
-        <div class="container">
-            <div class="jumbotron">
-                <h1> This is a test image</h1>
-            </div>
-            
-            <img src="{% static 'images/djangotest.jpg' %}" alt="My image">
-           
-            <div class="djangotwo">
-                {% if access_records %}
-                <table class="landingpage">
-                    <thead>
-                        <th> Site Name</th>
-                        <th> Date Accessed </th>
-                    </thead>
-                    {% for acc in access_records %}
-                    <tr>
-                        <td> {{ acc.name }}</td>
-                        <td> {{ acc.date }}</td>
-                    </tr>
-                    {% endfor %}
-                </table>
-                {% else %}
-                    <p> NO ACCESS RECORDS</p>
-                {% endif %}
-            </div>
-        </div>
-    </body>
-</html>
+{% extends "first_app/base.html" %}
+{% block body_block %}
+    <div class="jumbotron">
+        <h1> Django Level Five </h1>
+    </div>
+{% endblock %}
+
+
+
